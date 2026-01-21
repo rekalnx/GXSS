@@ -86,3 +86,8 @@ Plaintext
 [SYSTEM STATE: SECURE]
 [LOGIC CAPACITY: 1000X]
 [ARCHITECT: GRANDMASTER]
+
+Cara running:
+```
+go run . -u "https://utme.uniqlo.com/jp/front/mkt/cart?cart=0&locale=1" -c 20 -debug
+```
