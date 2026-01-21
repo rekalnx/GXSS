@@ -1,9 +1,10 @@
-██████╗ ██╗  ██╗███████╗███████╗
-██╔════╝ ██║  ██║██╔════╝██╔════╝
-██║  ███╗╚██╗██╔╝███████╗███████╗
-██║   ██║ ██╔██╗ ╚════██║╚════██║
-╚██████╔╝██╔╝ ██╗███████║███████║
- ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+██████╗ ██╗  ██╗███████╗███████╗                                                                                                                                                                               
+██╔════╝ ██║  ██║██╔════╝██╔════╝                                                                                                                                                                               
+██║  ███╗╚██╗██╔╝███████╗███████╗                                                                                                                                                                               
+██║   ██║ ██╔██╗ ╚════██║╚════██║                                                                                                                                                                               
+╚██████╔╝██╔╝ ██╗███████║███████║                                                                                                                                                                               
+ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝                                                                                                                                                                               
+
     CONTEXT-AWARE XSS ENGINE
 
 GXSS — The Ultimate High-Performance Context-Aware XSS Vulnerability Discovery Framework. Didesain oleh Grandmaster System Architect untuk eksploitasi presisi dan analisis sistem berkinerja tinggi.
